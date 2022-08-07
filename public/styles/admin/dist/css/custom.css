@@ -1,0 +1,23 @@
+.card-header {
+    margin-bottom: 10px;
+}
+#dataTable_wrapper {
+    margin: 20px;
+}
+
+.overlay {
+    background-color:#EFEFEF;
+    position: fixed;
+    width: 100%;
+    height: 100%;
+    z-index: 1000;
+    top: 0px;
+    left: 0px;
+    opacity: .5; /* in FireFox */
+    filter: alpha(opacity=50); /* in IE */
+}
+
+.select2-container .select2-selection {
+    height: 100px;
+    overflow-y: scroll;
+}
