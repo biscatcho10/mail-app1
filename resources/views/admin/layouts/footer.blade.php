@@ -66,14 +66,21 @@
 @stack("scripts")
 
 <!-- enable upload image in cke editor -->
-<script>
+{{-- <script>
     CKEDITOR.replace('editor');
     CKEDITOR.config.extraPlugins = 'uploadimage';
     CKEDITOR.config.uploadUrl = "{{route('upload.image', ['_token' => csrf_token() ])}}";
-    CKEDITOR.config.filebrowserUploadUrl = "{{route('upload.image', ['_token' => csrf_token() ])}}";
+    CKEDITOR.config.filebrowserUploadUrl = "{{route('image.upload', ['_token' => csrf_token() ])}}";
     CKEDITOR.config.filebrowserImageUploadUrl = "{{route('upload.image', ['_token' => csrf_token() ])}}";
-</script>
+</script> --}}
 
+
+<script type="text/javascript">
+    CKEDITOR.replace('mailEditor', {
+        filebrowserUploadUrl: "{{route('image.upload', ['_token' => csrf_token() ])}}",
+        filebrowserUploadMethod: 'form'
+    });
+</script>
 
 </body>
 </html>

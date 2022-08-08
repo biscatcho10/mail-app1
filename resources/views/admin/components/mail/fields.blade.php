@@ -43,8 +43,7 @@
     <div class="col-sm-12">
         <div class="form-group">
             {{ form::label('message','Message')}}
-            <textarea class="ckeditor form-control" name="message"
-                      style="width: 100%">{{$mail->message}}</textarea>
+            <textarea class="ckeditor form-control" name="message" id="mailEditor" style="width: 100%">{{$mail->message}}</textarea>
         </div>
     </div>
 </div>

@@ -39,7 +39,7 @@ Route::group(['prefix' => 'admin', 'namespace' => 'Admin', 'middleware' => 'auth
     Route::resource('settings', 'SettingsController')->except(['update', 'destroy', 'edit', 'store', 'create']);
     Route::post("settings", "SettingsController@update")->name("settings.update");
 
-    Route::post('ckeditor/image_upload', 'MailsController@upload')->name('upload.image');
+    Route::post('ckeditor/image_upload', 'MailsController@upload')->name('image.upload');
 //    Route::get("test-mail", "MailsController@composeEmail");
 });
 
